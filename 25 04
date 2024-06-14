@@ -1,17 +1,17 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usuario
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo de memoria
-#include <locale.h> //biblioteca de alocaÁıes de texto por regiao
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usuario
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo de memoria
+#include <locale.h> //biblioteca de aloca√ß√µes de texto por regiao
 #include <string.h> //biblioteca das strings
 
-int registro () //funÁ„o responsavel por cadastrar os usuarios no sistema
+int registro () //fun√ß√£o responsavel por cadastrar os usuarios no sistema
 {		
-	//inicio da criaÁ„o de variaveis/string
+	//inicio da cria√ß√£o de variaveis/string
 	char arquivo[40];
 	char cpf [40];
 	char nome [40];
 	char sobrenome [40];
 	char cargo [40];
-	//final da criaÁ„o
+	//final da cria√ß√£o
 	
 	printf("Digite o CPF a ser cadastrado: \n"); //coletando dados do usuario
 	scanf("%s", cpf); // "%s" se refere a string
@@ -80,12 +80,12 @@ int consulta()
 	
 	if(file == NULL)
 	{
-		printf("N„o foi possivel abrir o arquivo, n„o localizado!. \n");
+		printf("N√£o foi possivel abrir o arquivo, n√£o localizado!. \n");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-		printf("\nEssas s„o as informaÁıes do usu·rio: ");
+		printf("\nEssas s√£o as informa√ß√µes do usu√°rio: ");
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
@@ -100,7 +100,7 @@ int deletar()
 {
 	char cpf[40];
 	
-	printf("Digite o CPF do usu·rio a ser deletado: ");
+	printf("Digite o CPF do usu√°rio a ser deletado: ");
 	scanf("%s", cpf);
 	
 	remove(cpf);
@@ -110,7 +110,7 @@ int deletar()
 	
 	if(file == NULL);
 	{
-		printf("O usu·rio n„o se encontra no sistema! \n");
+		printf("O usu√°rio n√£o se encontra no sistema! \n");
 		system("pause");
 	}
 	
@@ -130,8 +130,8 @@ int main()
 	
 		setlocale(LC_ALL, "Portuguese"); //definindo a linguagem
 		
-		printf("\t CartÛrio\n\n"); //inicio menu
-		printf(" Escolha a opÁ„o desejada: \n\n");
+		printf("\t Cart√≥rio\n\n"); //inicio menu
+		printf(" Escolha a op√ß√£o desejada: \n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n");
@@ -145,7 +145,7 @@ int main()
 		switch (opcao) // Menu de escolhas
 		{
 			case 1:
-			registro(); //chamada de funÁıes
+			registro(); //chamada de fun√ß√µes
 			break;
 			
 			case 2:
@@ -162,7 +162,7 @@ int main()
 			break;
 			
 			default:
-			printf("Essa opÁ„o n„o est· disponivel\n");
+			printf("Essa op√ß√£o n√£o est√° disponivel\n");
 			system("pause");
 			break;
 		}
