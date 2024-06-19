@@ -136,6 +136,7 @@ int main()
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n");
 		printf("\t4 - Sair do Sistema\n\n");
+		printf("Opção: ") //fim do menu
 			
 		scanf("%d", &opcao); // armazenando escolha do usuario
 			
